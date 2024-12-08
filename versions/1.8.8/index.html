@@ -5,14 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 		<meta name="description" content="Play minecraft 1.8 in your browser" />
 		<meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.8, 1.8.8" />
-		<title>EaglercraftX 1.8 WASM-GC</title>
+		<title>EaglercraftX 1.8</title>
 		<meta property="og:locale" content="en-US" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="EaglercraftX 1.8 WASM-GC" />
+		<meta property="og:title" content="EaglercraftX 1.8" />
 		<meta property="og:description" content="Play minecraft 1.8 in your browser" />
 		<meta property="og:image" content="favicon.png" />
 		<link type="image/png" rel="shortcut icon" href="favicon.png" />
-		<script type="text/javascript" src="bootstrap.js"></script>
+		<script type="text/javascript" src="classes.js"></script>
 		<script type="text/javascript">
 			"use strict";
 			window.addEventListener("load", function() {
@@ -26,7 +26,8 @@
 					window.eaglercraftXOpts = {
 						demoMode: false,
 						container: "game_frame",
-						assetsURI: "assets.epw",
+						assetsURI: "assets.epk",
+						localesURI: "lang/",
 						worldsDB: "worlds",
 						servers: [
 							/* example: { addr: "ws://localhost:8081/", name: "Local test server" } */
@@ -53,5 +54,6 @@
 			});
 		</script>
 	</head>
-	<body style="margin:0px;width:100%;height:100%;overflow:hidden;background-color:black;" id="game_frame"></body>
+	<body style="margin:0px;width:100%;height:100%;overflow:hidden;background-color:black;" id="game_frame">
+	</body>
 </html>
