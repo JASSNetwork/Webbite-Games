@@ -1,24 +1,22 @@
-# SolitaireLib
-Various solitaire games implemented in HTML.
-## Play Now
-* [Solitaire](https://zzymyn.github.io/SolitaireLib#klondike)
-* [Pyramid Solitaire](https://zzymyn.github.io/SolitaireLib#pyramid)
-### Rule Variations
-* Solitaire
-  * [see all stocks](https://zzymyn.github.io/SolitaireLib#klondikeex)
-  * [draw 1, 1 stock](https://zzymyn.github.io/SolitaireLib#klondike?restocksAllowed=0)
-  * [draw 1, 3 stocks](https://zzymyn.github.io/SolitaireLib#klondike?restocksAllowed=2)
-  * [draw 3, unlimited stocks](https://zzymyn.github.io/SolitaireLib#klondike?stockDraws=3)
-  * [draw 3, 1 stock](https://zzymyn.github.io/SolitaireLib#klondike?stockDraws=3&restocksAllowed=0)
-  * [draw 3, 3 stocks](https://zzymyn.github.io/SolitaireLib#klondike?stockDraws=3&restocksAllowed=2)
-* Pyramid Solitaire
-  * [1 stock](https://zzymyn.github.io/SolitaireLib#pyramid?restocksAllowed=0)
-  * [3 stocks](https://zzymyn.github.io/SolitaireLib#pyramid?restocksAllowed=2)
-  * [5 stocks](https://zzymyn.github.io/SolitaireLib#pyramid?restocksAllowed=4)
+# HTML5-Solitaire
 
-## Attributions
+![screenshot of the game](https://github.com/lasshi/HTML5-Solitaire/blob/master/screenshot.PNG)
 
-### SVG Playing Cards
-SVG playing card sets `bridge3-plain-super-qr` and `bridge3-wider-modern-qr` are from https://www.me.uk/cards/
+This project was created in fall 2014 at LUT on www course as a first assignment. The main point of the assignment was to show a knowledge of DOM manipulation. Because of that, the game itself isn´t made in the best possible way. More ideal way of creating game like this is (imo) a canvas. This is more of a demo of technology.
 
-I have made some modifications and additions too.
+### CONTENTS
+
+DIRECTORIES:
+
+ * img - contains a free card pack art, i found it here: http://www.ironstarmedia.co.uk/2010/01/free-game-assets-08-playing-card-pack/
+ * js - contains all javascript functionality
+ * styles - contains all css styling, including jQuery themes
+
+FILES:
+
+ * README.html + readme.css - report written for a course assistant about the project
+ * /js/main.js - main functionality of the game
+ * /js/utils.js - some utility functionality
+ * + jquery files
+
+whole project is free to use however.
