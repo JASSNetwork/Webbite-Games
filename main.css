@@ -1,31 +1,136 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  h1 {
-    margin-top: 50px;
-  }
-  .button-container {
-    margin-top: 100px;
-  }
-  .game-button {
-    background-color: #333;
-    color: white;
-    padding: 15px 30px;
-    margin: 15px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  .game-button:hover {
-    background-color: #555;
-  }
-  .game-button:active {
-    background-color: #777;
-  }
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #121212;
+  color: #0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.terminal {
+  font-family: 'Courier New', monospace;
+  background-color: #121212;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  overflow-y: auto;   
+  margin: 0;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.terminal-output {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+header {
+  border-bottom: 1px solid #0f0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+h1, h2, h3, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #8f8;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #0ff;
+}
+
+h5 {
+  font-size: 0.9rem;
+  color: #6f6;
+  margin-top: 5px;
+}
+
+h5 a {
+  color: #0f0;
+  text-decoration: none;
+}
+
+h5 a:hover {
+  text-decoration: underline;
+}
+
+.terminal-output {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+}
+
+.command-line {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.command-line .prompt {
+  color: #0f0;
+  font-weight: bold;
+}
+
+.command-line input {
+  background-color: #121212;
+  color: #0f0;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+}
+
+.command-line input::placeholder {
+  color: #555;
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.terminal-button {
+  background-color: #111;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px 20px;
+  border: 1px solid #0f0;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.terminal-button:hover {
+  background-color: #222;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+.terminal-button:active {
+  background-color: #333;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
