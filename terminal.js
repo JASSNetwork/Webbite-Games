@@ -206,7 +206,7 @@ function executeCommand(command) {
       window.open("solitare", "_blank");
       break;
     case "spider":
-      window.open("spider/spider.htm", "_blank");
+      window.open("spider/Spider.htm", "_blank");
       break;
     case "shapez":
       window.open("shapez", "_blank");
