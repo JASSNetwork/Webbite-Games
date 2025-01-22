@@ -4,291 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eclipse</title>
-  <link rel="stylesheet" href="styles.css?v=4">
-  <script src="script.js?v=5"></script>
+  <title>VSreen</title>
+  <link rel="stylesheet" href="main.css?v=6">
+  <script src="script.js?v=6"></script>
 </head>
 
 <body>
   <div class="background" id="background"></div>
 
   <div class="launcher">
-    <div class="sidebar">
-      <div class="tab selected active-tab" onclick="showTab('home')">Home</div>
-      <div class="tab" onclick="showTab('archive')">Archive</div>
-      <div class="tab" onclick="showTab('serverj')">Servers/Server Jars</div>
-
-      <div class="tab" onclick="showTab('external')">Serverlist</div>
-      <div class="tab" onclick="showTab('credits')">Credits</div>
-
-      <div class="tab" onclick="showTab('settings')">Settings</div>
-      <div class="tab" onclick="window.open('https://discord.gg/tWFvtYCKb7')">Discord</div>
-    </div>
     <div class="content">
-      <!-- Home Tab -->
-      <div id="home" class="tab-content active">
-        <h1 id="home-page-text">Welcome to Eclipse</h1>
-        <div class="dropdown">
-          <label for="version-home">Select Version:</label>
-          <select id="version-home">
-            <option value="1.8.8">EaglercraftX 1.8</option>
-            <option value="1.12">Eagler 1.12 (24w48a)</option>
-            <option value="1.9.4">EaglerL 1.9</option>
-
-            <option value="starlike">Starlike</option> 
-            <option value="EFI">Eaglerforge</option>
-
-            <option value="1.5.2">Eaglercraft 1.5.2</option>
-            <option value="b1.7.3">Beta 1.7.3</option>
-            <option value="b1.3">Beta 1.3</option>
-            <option value="infdev">Infdev</option>
-            <option value="indev">Indev</option>
-            <option value="0.3">0.3 Survival Test</option>
-            <option value="classic">Classic</option>
-            
-
-          </select>
-        </div>
-        <button class="launch-button" onclick="launchVersion()">Launch</button>
-        <div class="news-widgets">
-          <h2>Latest News</h2>
-          <div class="news-item">1.5 - Update Clients & Update the CSS</div>
-        </div>
-        <div class="tab" onclick="showTab('news')">Show More News</div>
-
+      <h1 id="home-page-text">Welcome to Eagler</h1>
+      <div class="dropdown">
+        <label for="version-home">Select Version:</label>
+        <select id="version-home">
+          <option value="1.8.8">EaglercraftX 1.8</option>
+          <option value="1.9.4">EaglerL 1.9</option>
+          <option value="starlike">Starlike</option>
+          <option value="EFI">Eaglerforge</option>
+          <option value="1.5.2">Eaglercraft 1.5.2</option>
+          <option value="b1.7.3">Beta 1.7.3</option>
+          <option value="b1.3">Beta 1.3</option>
+          <option value="infdev">Infdev</option>
+          <option value="indev">Indev</option>
+          <option value="0.3">0.3 Survival Test</option>
+          <option value="classic">Classic</option>
+        </select>
       </div>
-
-      <!-- Archive Tab -->
-      <div id="archive" class="tab-content">
-        <h1>Eaglercraft Archive</h1>
-        <div class="dropdown">
-          <label for="archiveVer">Archived Versions:</label>
-          <select id="archiveVer">
-            <option value="forge">EaglerForge</option>
-
-            <option value="bettereag">BetterEagler</option>
-
-            <option value="reborn">EaglerReborn</option>
-          </select>
-        </div>
-        <button class="launch-button" onclick="launchArchive()">Launch</button>
-      </div>
-
-      <!-- News Tab -->
-      <div id="news" class="tab-content">
-        <h1>News</h1>
-        <h4>July 2024</h4>
-        <div class="news-item">1.5 - Update Clients & Update the CSS</div>
-
-        <div class="news-item">1.4.1 - Preset Themes</div>
-
-        <div class="news-item">1.4 - Customizable UI, 1.9.4 updated to V0.6</div>
-
-        <h4>June 2024</h4>
-        <div class="news-item">1.3 - Updated Textures</div>
-        <div class="news-item">1.2 - Backgrounds</div>
-        <div class="news-item">1.1 - Many Tabs</div>
-        <div class="news-item">1.0 - Initial Release</div>
-
-      </div>
-
-      <!-- Credits Tab -->
-      <div id="credits" class="tab-content">
-        <h1>Credits</h1>
-        <p>Here is a list of people who have made this project possible:</p>
-        <ul>
-          <li>Lax1dude, who made Eaglercraft</li>
-           <li>The Eaglerforge, EaglerReborn, and Hooisertransfer for their clients.</li>
-           <li>Eaglerserverlist Team who made the Serverlist</li>
-
-           <li>SpeedSlicer (Me) Who made this project</li>
-           <li>You, who kept me going.</li>
-
-          </ul>
-       
-    
-      </div>
-     
-      <!-- Server Jars Tab -->
-      <div id="serverj" class="tab-content">
-        <h1>Server Jars</h1>
-        <div class="download-buttons">
-          <h3>EaglercraftX 1.8</h3>
-          <button class="download-button" onclick="window.open('https://archive.eaglercraft.rip/EaglercraftX_1.8/server/EaglerXBungee-1.3.1.jar')">Download Latest EaglerXBungee</button>
-          <button class="download-button" onclick="window.open('https://archive.eaglercraft.rip/EaglercraftX_1.8/server/EaglerXVelocity-1.1.2.jar')">Download Latest EaglerXVelocity</button>
-          <button class="download-button" onclick="window.open('https://archive.eaglercraft.rip/EaglercraftX_1.8/server/')">View Archive</button>
-          <h3>Eaglercraft 1.5</h3>
-          <button class="download-button" onclick="window.open('https://archive.eaglercraft.rip/Eaglercraft_1.5/server/')">View Archive</button>
-          <h3>Eaglercraft Beta 1.3</h3>
-          <button class="download-button" onclick="window.open('https://archive.eaglercraft.rip/Eaglercraft_b1.3/server/22w22a/')">Download Server</button>
-          
-         </div>
-      </div>
-
-      <!-- Settings Tab -->
-      <div id="settings" class="tab-content">
-        <h1>Settings</h1>
-        <div class="dropdown">
-          <label for="theme-select">Select Background:</label>
-          <select id="theme-select" onchange="changeTheme(this.value)">
-            <option value="overworld">Overworld</option>
-            <option value="nether">Nether</option>
-            <option value="end">End</option>
-            <option value="cherryblossom">Cherry Blossom</option>
-            <option value="city">City</option>
-            <option value="colosseum">Colosseum</option>
-            <option value="cyberpunk">Cyberpunk</option>
-            <option value="office">Office</option>
-            <option value="snowstorm">Snowstorm</option>
-            <option value="starfall">Starfall</option>
-            <option value="room">Room</option>
-            <option value="retro">Retro</option>
-            <option value="redmoon">Red Moon</option>
-
-          </select>
-        </div>
-      
-        <div class="color-picker-wrapper">
-          <div class="color-picker">
-            <label for="base-color-picker">Button/Dropdown Color</label>
-            <input type="color" id="base-color-picker" value="#6e6e6e">
-          </div>
-          <div class="color-picker">
-            <label for="darker-color-picker">Bar/Widget Color</label>
-            <input type="color" id="darker-color-picker" value="#5c5c5c">
-          </div>
-          <div class="color-picker">
-            <label for="lighter-color-picker">Highlighted Color</label>
-            <input type="color" id="lighter-color-picker" value="#7f7f7f">
-          </div>
-          <div class="color-picker">
-            <label for="highlight-color-picker">Tint Color</label>
-            <input type="color" id="highlight-color-picker" value="#a3a3a3">
-          </div>
-          <div class="color-picker">
-            <label for="shadow-color-picker">Button Outline Color</label>
-            <input type="color" id="shadow-color-picker" value="#4b4b4b">
-          </div>
-          <div class="color-picker">
-            <label for="text-color-picker">Text Color</label>
-            <input type="color" id="text-color-picker" value="#ffffff">
-          </div>
-          <div class="color-picker">
-            <label for="background-color-picker">Background Color</label>
-            <input type="color" id="background-color-picker" value="#1e1e1e">
-        </div>
-        <button id="reset-defaults-button" onClick="resetToDefaults()">Reset to Default</button>
-        <br>
-        <h2>Preset Themes</h2>
-        <div class="button-container">
-          <button class="button" onclick="customPreset('#6e6e6e', '#5c5c5c', '#7f7f7f', '#a3a3a3', '#4b4b4b', '#ffffff', '#1e1e1e', 'overworld');">Casual</button>
-          <button class="button" onclick="customPreset('#700000', '#4f0c0c', '#230b0b', '#a3a3a3', '#000000', '#ffffff', '#000000', 'redmoon')">Red Moon</button>
-          <button class="button" onclick="customPreset('#521169', '#28013b', '#6b1084', '#a3a3a3', '#f9d7d7', '#ffffff', '#030635','cyberpunk' );">Cyberpunk</button>
-          <button class="button" onclick="customPreset('#9267eb', '#080044', '#131872', '#a3a3a3', '#12146b', '#ffffff', '#060043', 'starfall');">Starfall</button>
-          <button class="button" onclick="customPreset('#ca3f69', '#23688b', '#921758', '#a3a3a3', '#f7f7f7', '#ffffff', '#24567b', 'cherryblossom');">Cherry Blossom</button>
-          <button class="button" onclick="customPreset('#402682', '#3d5089', '#40558f', '#a3a3a3', '#6291c5', '#ffffff', '#4e1a65', 'snowstorm');">Snowy Peaks</button>
-        </div>
-        <div class="button-container">
-          <button class="button" onclick="customPreset('#510e0e', '#ab1d16', '#260508', '#a3a3a3', '#f7f7f7', '#ffffff', '#210506', 'nether');">Nether</button>
-          <button class="button" onclick="customPreset('#3b1871', '#480a6b', '#260508', '#a3a3a3', '#751688', '#ffffff', '#000000', 'end');">End</button>
-          <button class="button" onclick="customPreset('#1d588b', '#112f4b', '#7f7f7f', '#a3a3a3', '#7c0e3e', '#ffffff', '#577ea0', 'city');">City</button>
-          <button class="button" onclick="customPreset('#0c1c26', '#2a5f6e', '#000000', '#0c1c26', '#5a3a48', '#ffffff', '#0c1c26', 'office');">Office</button>
-          <button class="button" onclick="customPreset('#1f1551', '#451063', '#3f3187', '#0c1c26', '#5a3a48', '#ffffff', '#0c1c26', 'retro');">Retro</button>
-        </div>
-          <button onclick="copyCustomPreset()" class="button">Copy Custom Preset</button>
-        </div>
-
-      
-        
-      </div>
-      <div id="external" class="tab-content">
-        <h1>External Servers</h1>
-        <div class="server-list minecraft-scrollbar">
-          <!-- Server entries -->
-          <div class="server-entry">
-              <div class="server-details">
-                  <span class="server-name">ArchMC</span>
-                  <span class="server-address">wss://mc.arch.lol</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://mc.arch.lol'">Play</button>
-          </div>
-          <div class="server-entry">
-              <div class="server-details">
-                  <span class="server-name">Asianf4rmer</span>
-                  <span class="server-address">wss://asianf4rmer.minecraft.pe</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://asianf4rmer.minecraft.pe'">Play</button>
-          </div>
-          <div class="server-entry">
-              <div class="server-details">
-                  <span class="server-name">Asspixel</span>
-                  <span class="server-address">wss://mc.asspixel.net</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://mc.asspixel.net'">Play</button>
-          </div>
-          <div class="server-entry">
-              <div class="server-details">
-                  <span class="server-name">Ayunboom</span>
-                  <span class="server-address">wss://sus.shhnowisnottheti.me</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://sus.shhnowisnottheti.me'">Play</button>
-          </div>
-          <div class="server-entry">
-              <div class="server-details">
-                  <span class="server-name">CloudWars</span>
-                  <span class="server-address">wss://eg.cloudwars.club</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://eg.cloudwars.club'">Play</button>
-          </div>
-          <div class="server-entry">
-              <div class="server-details">
-                  <span class="server-name">Fire Network</span>
-                  <span class="server-address">wss://mc.firenetwork.lol</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://mc.firenetwork.lol'">Play</button>
-          </div>
-          <div class="server-entry">
-              <div class="server-details">
-                  <span class="server-name">Vanilla Network</span>
-                  <span class="server-address">wss://play.vanilanetwork.uk.to</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://play.vanilanetwork.uk.to'">Play</button>
-          </div>
-          <div class="server-entry">
-              
-              <div class="server-details">
-                  <span class="server-name">VanillaMC Legacy</span>
-                  <span class="server-address">wss://vanillacraft.kones.tech</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://mc.asspixel.net'">Play</button>
-          </div>
-          <div class="server-entry">
-              <div class="server-details">
-                  <span class="server-name">Zentic</span>
-                  <span class="server-address">wss://zentic.cc</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://zentic.cc'">Play</button>
-          </div>
-          <div class="server-entry">
-              <div class="server-details">
-                  <span class="server-name">ZythMC</span>
-                  <span class="server-address">wss://mc.zyth.me</span>
-              </div>
-              <button class="copy-button">Copy</button>
-              <button class="play-button" onclick="location.href='versions/1.8.8/?server=wss://mc.zyth.me'">Play</button>
-          </div>
-          <!-- Add more server entries as needed -->
-      </div>
-      </div>
+      <button id="play-button" onclick="launchGame()">Play</button>
       
     </div>
   </div>
