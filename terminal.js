@@ -65,6 +65,7 @@ function executeCommand(command) {
             <li>spider - Play Spider (spider.htm)</li>
             <li>shapez - Play Shapez</li>
             <li>request - Request something (request.html)</li>
+            <li>EXC - Play EXC</li>
           </ul>
         `;
       break;
@@ -89,9 +90,17 @@ function executeCommand(command) {
     case "chicken":
       terminalOutput.innerHTML += `<p>Cluck cluck! 🐔</p>`;
       break;
-    case "knock":
-      terminalOutput.innerHTML += `<p>Knock knock.</p><p>Who's there? It's a mystery...</p>`;
-      break;
+      case "knock":
+        const jokes = [
+          { setup: "Knock knock.", punchline: "Who's there? It's a mystery..." },
+          { setup: "Knock knock.", punchline: "Who's there? Lettuce. Lettuce who? Lettuce in, it's cold out here!" },
+          { setup: "Knock knock.", punchline: "Who's there? Cow says. Cow says who? No, cow says moooo!" },
+          { setup: "Knock knock.", punchline: "Who's there? Boo. Boo who? Don't cry, it's just a joke!" },
+          { setup: "Knock knock.", punchline: "Who's there? Atch. Atch who? Bless you!" }
+        ];
+        const joke = jokes[Math.floor(Math.random() * jokes.length)];
+        terminalOutput.innerHTML += `<p>${joke.setup}</p><p>${joke.punchline}</p>`;
+        break;
     case "fortune":
       const fortunes = [
         "You will find a great fortune in your next cookie.",
@@ -214,7 +223,9 @@ function executeCommand(command) {
     case "request":
       window.open("request.html", "_blank");
       break;
-
+    case "EXC":
+      window.open("EXC", "_blank");
+      break;
     default:
       terminalOutput.innerHTML += `<p>Unknown command: ${command} — Try typing "help" for a list of commands!</p>`;
   }

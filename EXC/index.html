@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>EXC</title>
+      <!--<link rel="stylesheet" href="../../assets/styles/css/global.min.css">-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link rel="stylesheet" href="index.css">
+      <link rel="icon" type="image/x-icon" href="logo.png">
+      
+      <link rel="shortcut icon" type="image/jpg" href="~/favicon.ico"/>
+      
+      <link rel="stylesheet" href="../assets/font-awesome/css/all.css">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+        <style>
+            #popularSites img {
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                cursor: pointer;
+                border-radius: 10px;
+                transition: transform 0.2s;
+            }
+            #popularSites img:hover {
+                transform: scale(1.1);
+            }
+
+            #bigTitle img {
+               width: 15vw;
+            }
+        </style>
+   </head>
+   <body>
+      
+      
+      <canvas id="canvas"></canvas>
+      <div id="header">
+         <img src="logo.png" alt="Logo" id="bigTitle">
+      </div>
+      <div id="content">
+         
+
+         <form id="uv-form">
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
+          </form>
+           <div id="popularSites">
+             <br>
+            <div class="tiktok-button">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo-tiktok.svg" alt="TikTok" onclick="autofill('https://tiktok.com')">
+           </div>                
+            </div>
+            
+          <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+          </div>
+        
+      </div>
+      <script src="uv/uv.bundle.js" charset="UTF-8" defer></script>
+      <script src="uv/uv.config.js" charset="UTF-8" defer></script>
+      <script src="register-sw.js" charset="UTF-8" defer></script>
+      <script src="search.js" charset="UTF-8" defer></script>
+      <script src="index.js" charset="UTF-8" defer></script>
+      <div id="footer">
+      </div>
+   </body>
+</html>
