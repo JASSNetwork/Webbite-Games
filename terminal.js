@@ -224,7 +224,7 @@ function executeCommand(command) {
       window.open("request.html", "_blank");
       break;
     case "EXC":
-      window.open("exc.html", "_blank");
+      window.open("EXC", "_blank");
       break;
     default:
       terminalOutput.innerHTML += `<p>Unknown command: ${command} — Try typing "help" for a list of commands!</p>`;
