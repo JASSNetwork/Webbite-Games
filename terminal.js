@@ -226,6 +226,9 @@ function executeCommand(command) {
     case "EXC":
       window.open("EXC", "_blank");
       break;
+    case "idle":
+      window.open("idle-breakout", "_blank");
+      break;
     default:
       terminalOutput.innerHTML += `<p>Unknown command: ${command} — Try typing "help" for a list of commands!</p>`;
   }
