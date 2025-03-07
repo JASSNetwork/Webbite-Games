@@ -223,8 +223,8 @@ function executeCommand(command) {
     case "request":
       window.open("request.html", "_blank");
       break;
-    case "EXC":
-      window.open("EXC", "_blank");
+    case "exc":
+      window.open("https://exc.speedslicer.dev", "_blank");
       break;
     case "idle":
       window.open("idle-breakout", "_blank");
