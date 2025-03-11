@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webbite Terminal</title>
+  <link rel="stylesheet" href="main.css?v=3">
+</head>
+<body>
+  <div class="terminal">
+    <header>
+      <h1>Webbite Terminal</h1>
+      <h2>By Speedslicer</h2>
+      <h5>Questions? <a href="mailto:verystupidnoobperson@gmail.com">verystupidnoobperson@gmail.com</a></h5>
+    </header>
+    <h1>Games</h1>
+    <div class="button-container">
+      <button class="terminal-button" onclick="executeCommand('minecraft')">Minecraft</button>
+      <button class="terminal-button" onclick="executeCommand('retrobowl')">Retro Bowl</button>
+      <button class="terminal-button" onclick="executeCommand('cookieclicker')">Cookie Clicker</button>
+      <button class="terminal-button" onclick="executeCommand('slope')">Slope</button>
+      <button class="terminal-button" onclick="executeCommand('appel')">Appel</button>
+      <button class="terminal-button" onclick="executeCommand('blockblast')">Block Blast</button>
+      <button class="terminal-button" onclick="executeCommand('watermelon')">Suika</button>
+      <button class="terminal-button" onclick="executeCommand('consolepong')">Console Pong</button>
+      <button class="terminal-button" onclick="executeCommand('2048-CUPCAKES')">Cupcake 2048</button>
+      <button class="terminal-button" onclick="executeCommand('solitare')">Solitaire</button>
+      <button class="terminal-button" onclick="executeCommand('spider')">Spider Solitaire</button>
+      <button class="terminal-button" onclick="executeCommand('shapez')">Shapez</button>
+      <button class="terminal-button" onclick="executeCommand('idle')">Idle Breakout</button>
+      <button class="terminal-button" onclick="executeCommand('exc')">EXC</button>
+
+    </div>
+    <div class="terminal-output">
+      <p><span class="prompt">$ </span><span class="output-text">Welcome to Webbite Terminal. Type a command below:</span></p>
+      <p>type help for the list of commands</p>
+    </div>
+
+    <div class="command-line">
+      <span class="prompt">$ </span><input type="text" id="command-input" onkeydown="handleCommand(event)" placeholder="Type a command..." />
+    </div>
+
+   
+  </div>
+
+  <script src="terminal.js?v=3"></script>
+</body>
+</html>
