@@ -229,6 +229,9 @@ function executeCommand(command) {
     case "idle":
       window.open("idle-breakout", "_blank");
       break;
+  case "prox":
+      window.open("https://infinitecampus.info", "_blank");
+      break;
     default:
       terminalOutput.innerHTML += `<p>Unknown command: ${command} — Try typing "help" for a list of commands!</p>`;
   }
