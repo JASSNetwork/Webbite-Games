@@ -238,3 +238,56 @@ function executeCommand(command) {
 
   terminalOutput.scrollTop = terminalOutput.scrollHeight;
 }
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('file.txt')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load folder_list.txt');
+      }
+      return response.text();
+    })
+    .then(text => {
+      const folders = text.split('\n')
+        .map(line => line.trim())
+        .filter(line => line.length > 0); 
+      
+      createGameButtons(folders);
+      
+      document.getElementById('loading-message').style.display = 'none';
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      document.getElementById('loading-message').textContent = 'Error loading game list: ' + error.message;
+      document.getElementById('loading-message').style.color = '#f55';
+    });
+});
+
+function createGameButtons(folders) {
+  const container = document.getElementById('game-buttons');
+  
+  folders.forEach(folder => {
+    const displayName = folder.replace('./', '')
+      .split('-').join(' ')
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+    
+    const button = document.createElement('button');
+    button.className = 'terminal-button';
+    button.textContent = displayName;
+    
+    button.addEventListener('click', function() {
+      openFolder("/HTML-Games-V2/" + folder);
+    });
+    
+    container.appendChild(button);
+  });
+}
+
+function openFolder(folderPath) {
+  const output = document.getElementById('output');
+  output.innerHTML = `Opening ${folderPath}/index.html...`;
+  
+  window.open(`${folderPath}/index.html`, '_blank');
+  
+}
